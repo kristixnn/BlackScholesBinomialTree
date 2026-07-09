@@ -128,9 +128,9 @@ def plot_heatmap(bs_model,spot_range,vol_range,strike):
         for j,spot in enumerate(spot_range):
             bs_temp = BlackScholes(
                 time_of_expiry=bs_model.time_of_expiry,
-                strike=bs_model.strike,
-                spot_price=bs_model.spot_price,
-                volatility=bs_model.volatility,
+                strike=strike,
+                spot_price=spot_price,
+                volatility=volatility,
                 interest_rate=bs_model.interest_rate
                 )
             bs_temp.calculate()
