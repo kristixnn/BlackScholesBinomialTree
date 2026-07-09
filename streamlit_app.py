@@ -101,7 +101,7 @@ with st.sidebar:
     st.title("📊 Black-Scholes Model")
     st.write("`Created by:`")
     github_url = "https://github.com/kristixnn"
-    st.markdown(f'<a href="{github_url}" target="_blank" style="text-decoration: none; color: inherit;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">`Prudhvi Reddy, Muppala`</a>', unsafe_allow_html=True)
+    st.markdown(f'<a href="{github_url}" target="_blank" style="text-decoration: none; color: inherit;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="25" height="25" style="vertical-align: middle; margin-right: 10px;">`Kristiyan Tashev`</a>', unsafe_allow_html=True)
 
     spot_price = st.number_input("Current Asset Price", value=100.0)
     strike = st.number_input("Strike Price", value=100.0)
@@ -121,8 +121,8 @@ with st.sidebar:
 
 
 def plot_heatmap(bs_model,spot_range,vol_range,strike):
-    call_prices = np.zeros(len(vol_range),len(spot_range))
-    put_prices = np.zeros(len(vol_range),len(spot_range))
+    call_prices = np.zeros((len(vol_range),len(spot_range)))
+    put_prices = np.zeros((len(vol_range),len(spot_range)))
     
     for i,vol in enumerate(vol_range):
         for j,spot in enumerate(spot_range):
