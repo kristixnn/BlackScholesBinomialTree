@@ -69,7 +69,7 @@ class BlackScholes:
         self.time_of_expiry = time_of_expiry
         self.strike = strike
         self.spot_price = spot_price
-        self.volatiltiy = volatility
+        self.volatility = volatility
         self.interest_rate=interest_rate
         
     def calculate(
