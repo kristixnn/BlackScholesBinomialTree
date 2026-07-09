@@ -35,7 +35,7 @@ class BlackScholes:
         d2 = d1-volatility*sqrt(time_of_expiry)
         
         call=spot_price * norm.cdf(d1)-(strike*exp(-(interest_rate*time_of_expiry))*norm.cdf(d2))
-        put=(strike*exp(-(interest_rate*time_of_expiry))*norm.cdf(-d2))-spot_price * norm.cdf(-d1)
+        put=(strike * exp(-(interest_rate * time_of_expiry)) * norm.cdf(-d2)) - spot_price * norm.cdf(-d1)
         
         self.call=call
         self.put = put
